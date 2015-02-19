@@ -8,9 +8,35 @@ body
 header
 {
 	background: #fff;
+	height: 100px;
+	margin: 0px auto 0px auto;
+	text-align: center;
+	width: 100%;
+}
+header #top-lado1, #top-lado2
+{
+	display: inline-block;
+	vertical-align: top;
+	width: 48%;
+}
+header #top-lado2
+{
+	text-align: right;
+	padding: 37px 15px 0px 0px;
+}
+header #top-lado2 a
+{
+	color: #909090;
+	padding: 10px 0px 0px 10px;
+	text-align: right;
+	text-decoration: none;
+
 }
 nav
 {
+	background: #BE453B;
+	float: right;
+	height: 57px;
 	margin: 0;
 	padding: 0;
 	width: 100%;
@@ -19,4 +45,17 @@ object
 {
 	width: 100%;
 	z-index: 10000;
+}
+#fondo-imagen
+{
+	background-image: url(../images/fondoapto.jpg);
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 614px;
+	width: 100%;
+}
+#fondo-imagen img
+{
+	width: 100%;
 }

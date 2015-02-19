@@ -2,20 +2,22 @@ body, nav, ul, li, a  {margin: 0; padding: 0;}
 body {font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; }
 a {text-decoration: none;}
 .container {
-    width: 90%;
+    width: 100%;
     max-width: 900px;
-    /*margin: 10px auto;*/
+    float: right;
+    margin: 7px auto;
+    z-index: 20000;
 }
 .toggleMenu {
     display:  none;
-    background: #666;
+    background: #BE453B;
     padding: 10px 15px;
     color: #fff;
 }
 .nav {
     list-style: none;
      *zoom: 1;
-     background:#175e4c;
+     background:#BE453B;
 }
 .nav:before,
 .nav:after {
@@ -30,15 +32,19 @@ a {text-decoration: none;}
     width: 9em;
 }
 .nav a {
-    padding: 10px 15px;
+    padding: 16px 15px;
     color:#fff;
+}
+.nav a:hover
+{
+    text-shadow: rgba(0,0,0,0.9) 1px 2px 2px;
 }
 .nav li {
     position: relative;
 }
 .nav > li {
     float: left;
-    border-top: 1px solid #104336;
+    /*border-top: 1px solid #104336;*/
 }
 .nav > li > .parent {
     background-image: url("images/downArrow.png");
