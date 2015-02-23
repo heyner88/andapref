@@ -27,10 +27,19 @@ header #top-lado2
 header #top-lado2 a
 {
 	color: #909090;
-	padding: 10px 0px 0px 10px;
+	padding: 10px 106px 0px 10px;
 	text-align: right;
 	text-decoration: none;
 
+}
+header #top-lado1
+{
+	/*text-align: left;*/
+}
+header #top-lado1 img
+{
+	width: 218px;
+	padding: 11px 5px 5px 40px;
 }
 nav
 {
@@ -50,7 +59,7 @@ object
 }
 #fondo-imagen
 {
-	background-image: url(../images/fondoapto.jpg);
+	background: #333;
 	background-position: center center;
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -60,4 +69,71 @@ object
 #fondo-imagen img
 {
 	width: 100%;
+}
+#fondo-imagen #selecc
+{
+	margin: 340px 0px 0px 101px;
+	position: absolute;
+	z-index: 10000;
+}
+#fondo-imagen #selecc h2
+{
+	background: url(../images/backh2.png);
+	padding: 0.2em;
+	color: #fff;
+	font-size: 40px;
+	text-transform: uppercase;
+	text-shadow: rgba(0,0,0,0.9) 1px 2px 2px;
+}
+#fondo-imagen #selecc select
+{
+	color: #333;
+	border:none;
+	font-size: 25px;
+	margin-left: 2px;
+	padding: 5px 35px 5px 15px;
+}
+
+
+
+
+@media screen and (max-width: 800px)
+{
+header #top-lado1
+{
+	width: 98%;
+}
+header #top-lado1 img	
+{
+	padding: 11px 5px 5px 25px;
+}
+header #top-lado2
+{
+	display: none;
+}
+#fondo-imagen
+{
+	height: 350px;
+}
+#fondo-imagen #selecc
+{
+	margin: 140px 0px 0px 32px;
+	position: absolute;
+	z-index: 10000;
+}
+#fondo-imagen #selecc h2
+{
+	color: #fff;
+	font-size: 19px;
+	text-transform: uppercase;
+	text-shadow: rgba(0,0,0,0.9) 1px 2px 2px;
+}
+#fondo-imagen #selecc select
+{
+	color: #333;
+	border:none;
+	font-size: 25px;
+	margin-left: 37px;
+	padding: 5px 35px 5px 15px;
+}
 }
