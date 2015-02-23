@@ -83,6 +83,7 @@ footer
 	display: inline-block;
 	margin: 0px auto 0px auto;
 	padding: 1.8em;
+	vertical-align: top;
 }
 .footersec p
 {
