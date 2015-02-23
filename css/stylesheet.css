@@ -5,6 +5,14 @@ body
 	margin: 0;
 	padding: 0;
 }
+hr
+{
+	border: solid #3A3838;
+	border-width: 1px 0 0;
+	clear: both;
+	margin: 1.25rem 0 1.1875rem;
+	height: 0;
+}
 header
 {
 	background: #fff;
@@ -43,7 +51,7 @@ header #top-lado1 img
 }
 nav
 {
-	background: #BE453B;
+	background: #D71E1E;
 	float: right;
 	height: 57px;
 	margin: 0;
@@ -56,6 +64,62 @@ object
 {
 	width: 100%;
 	z-index: 10000;
+}
+footer
+{
+	background: #1A1818;
+	margin: 0px auto 0px auto;
+	text-align: center;
+}
+.divi1
+{
+	margin-bottom: 40px;
+	text-align: center;
+	margin: 0px auto 0px auto;
+	width: 100%;
+}
+.footersec
+{
+	display: inline-block;
+	margin: 0px auto 0px auto;
+	padding: 1.8em;
+}
+.footersec p
+{
+	color: #fff;
+	font-weight: 300;
+	font-size: 14px;
+	text-align: left;
+}
+.footersec h2
+{
+	color: #fff;
+	font-weight: 300;
+	margin: 0;
+	padding: 0;
+	text-align: left;
+}
+#copyright img
+{
+	width: 70px;
+	padding-bottom: 0.5em;
+}
+#copyright
+{
+	color: #fff;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 12px;
+	font-weight: 300;
+	text-shadow: 0.01em 0.08em #002c27;
+}
+#copyright p
+{
+	margin-top: 19px;
+}
+#copyright a
+{
+	color: #fff;
+	text-decoration: none;
 }
 #fondo-imagen
 {

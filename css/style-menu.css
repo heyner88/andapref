@@ -10,14 +10,14 @@ a {text-decoration: none;}
 }
 .toggleMenu {
     display:  none;
-    background: #BE453B;
+    background: #D71E1E;
     padding: 10px 15px;
     color: #fff;
 }
 .nav {
     list-style: none;
      *zoom: 1;
-     background:#BE453B;
+     background:#D71E1E;
 }
 .nav:before,
 .nav:after {
@@ -67,10 +67,10 @@ a {text-decoration: none;}
 }
 .nav li li a {
     display: block;
-    background: #1d7a62;
+    background: #B03120;
     position: relative;
     z-index:100;
-    border-top: 1px solid #175e4c;
+    border-top: 1px solid #590808;
 }
 .nav li li li a {
     background:#249578;
