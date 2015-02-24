@@ -67,10 +67,15 @@ a {text-decoration: none;}
 }
 .nav li li a {
     display: block;
-    background: #B03120;
+    background: #B50303;
     position: relative;
     z-index:100;
+    width: 100%;
     border-top: 1px solid #590808;
+}
+.nav li li a:hover
+{
+    background: #7E0202;
 }
 .nav li li li a {
     background:#249578;
