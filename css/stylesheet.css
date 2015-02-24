@@ -71,6 +71,12 @@ footer
 	margin: 0px auto 0px auto;
 	text-align: center;
 }
+.contenido
+{
+	margin: 2.8em auto 0px auto;
+	text-align: center;
+	width: 70%;
+}
 .divi1
 {
 	margin-bottom: 40px;
@@ -189,7 +195,71 @@ footer
 	padding: 0.8em;
 	width: 86%;
 }
-
+#ladoiz
+{
+	margin: 1em auto 0px auto;
+	width: 30%;
+}
+#ladoiz #menu-izq ul
+{
+	text-align: left;
+	margin-bottom: 1.5em;
+}
+#ladoiz #menu-izq ul li
+{
+	background: #ddd;
+	border-bottom: 1px solid #333;
+	padding: 0.8em 0.8em 0.8em 0.8em;
+	
+}
+#ladoiz #menu-izq ul li a
+{
+	color: #333;
+	padding: 0.5em 0.5em 0.5em 0.5em;
+	-webkit-transition:.4s;
+}
+#ladoiz #menu-izq ul li:hover
+{
+	background: #8B8B8B;
+	border-left: 5px solid #D71E1E;
+	color: #fff;
+	-webkit-transition:.4s;
+}
+#ladoiz #menu-izq ul li a:hover
+{
+	color: #fff;
+}
+#ladoiz h2
+{
+	color: #676767;
+	font-size: 28px;
+	text-transform: uppercase;
+	text-align: left;
+}
+#ladodere h2
+{
+	color: #676767;
+	font-size: 28px;	
+	text-align: left;
+}
+#ladodere .contenido-dere p
+{
+	color: #454545;
+	text-align: justify;
+}
+#ladodere .contenido-dere
+{
+	padding: 0.8em 0.8em 0.8em 3.8em
+}
+#ladodere
+{
+	width: 60%;
+}
+#ladoiz, #ladodere
+{
+	display: inline-block;
+	vertical-align: top;
+}
 
 
 @media screen and (max-width: 800px)
