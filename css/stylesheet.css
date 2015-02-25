@@ -246,6 +246,7 @@ footer
 {
 	color: #454545;
 	text-align: justify;
+	line-height: 25px;
 }
 #ladodere .contenido-dere
 {
@@ -276,10 +277,25 @@ header #top-lado2
 {
 	display: none;
 }
+.contenido
+{
+	width: 96%;
+}
 .footersec
 {
 	width: 98%;
 }
+#ladodere .contenido-dere
+{
+	margin: 0px auto 0px auto;
+	padding: 0.8em;
+	width: 94%;
+}
+#ladoiz
+{
+	padding-top:1.8em; 
+}
+
 #fondo-imagen
 {
 	height: 350px;
@@ -304,5 +320,13 @@ header #top-lado2
 	font-size: 25px;
 	margin-left: 37px;
 	padding: 5px 35px 5px 15px;
+}
+#ladoiz, #ladodere
+{
+	width: 95%;
+}
+#ladoiz
+{
+	display: block;
 }
 }
