@@ -13,7 +13,13 @@
 <link rel="stylesheet" href="css/responsivemobilemenu.css" type="text/css"/>
 <link rel="stylesheet" type="text/css" href="css/style-menu.css">
 <script type="text/javascript" src="js/modernizr.custom.86080.js"></script>
+<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
 <script type="text/javascript" src="js/prefixfree.js"></script>
+<script type="text/javascript">
+	$('#re').live('click',function(){$('#cont2,#cont3').fadeOut();$('#cont1').fadeIn()})
+	$('#mi').live('click',function(){$('#cont1,#cont3').fadeOut();$('#cont2').fadeIn()})
+	$('#va').live('click',function(){$('#cont1,#cont2').fadeOut();$('#cont3').fadeIn()})
+</script>
 </head>
 <header>
 	<div id="top-lado1"><a href="#"><img src="images/logo.png"></a></div>
@@ -96,9 +102,9 @@
 	<h2>Nuestra Empresa</h2>
 	<div id="menu-izq">
 		<ul>
-			<li><a href="">Reseña Historica</a></li>
-			<li><a href="">Misión y Visión</a></li>
-			<li><a href="">Politicas de Calidad</a></li>
+			<li><a href="javascript:void(0)" id="re">Reseña Historica</a></li>
+			<li><a href="javascript:void(0)" id="mi">Misión y Visión</a></li>
+			<li><a href="javascript:void(0)" id="va">Politicas de Calidad</a></li>
 		</ul>
 	</div>
 
@@ -106,24 +112,51 @@
 <div id="ladodere">
 	<div id="cont1">
 		<div class="contenido-dere">
+		<div class="blan">
 			<h2>Reseña Historica</h2>
+			<img src="images/fachada.jpg">
 			<p>Esta es la historia de una empresa impulsada por un espíritu emprendedor que es ejemplo de crecimiento.  Desde <strong>1990</strong> nació <strong>CONSTRUCCIONES ANDAPREF</strong>, una empresa dedicada a aprender de sus clientes.  Su experiencia en el mercado de la construcción y la inmobiliaria demuestra que son ellos los que nos enseñan constantemente a optimizar nuestros servicios. </p>
 			<p>Tan solo siete años después de haberse conformado la entidad da un paso delante de su evolución empresarial pues en  1997 se constituye como sociedad y surge CONSTRUCCIONES ANDAPREF LTDA. </p>
 			<p>En mayo de 1998 la sociedad es afiliada a la Cámara de Comercio de Villavicencio y terminando el siglo XX decidimos ampliar nuestros servicios, afiliándonos a la Red Nacional Inmobiliaria. En Abril del 2000 comenzamos a prestar los servicios de inmobiliaria (Inmobiliaria y Construcciones Andapref Ltda.)</p>
 			<p>En noviembre del 2005 que la Secretaria de Gobierno municipal nos habilito para ejercer las actividades de arrendamiento, asignándonos la matrícula de arrendador No.5001-0001.</p>
 			<p>En julio del 2014 la empresa ha entrado en Sociedad cambiando su razón social de Ltda. a SAS. Reconociéndose la empresa como Inmobiliaria Andapref S.A.S a fin de ser reconocida como la mejor empresa en el sector inmobiliario de la región.</p>
 		</div>
+		</div>
 	</div>
 
 	<div id="cont2">
 		<div class="contenido-dere">
+		<div class="blan">
 			<h2>Visión</h2>
 			<p>hacer de inmobiliaria <strong>ANDAPREF SAS</strong>, una empresa proyectada hacia el futuro, para brindar lo mejor a sus clientes internos y externos, generando ventajas competitivas y acordes al crecimiento del mercado global, mirando siempre hacia las nuevas generaciones, contribuyendo con nuestros clientes internos en estabilidad, bienestar, profesionalismo, y así aportar para un mejor país.</p>
 			
 			<h2>Misión</h2>
 			<p>Inmobiliaria <strong>ANDAPREF SAS</strong> ofrece un servicio de excelentes garantías y calidad a toda persona que requiera nuestro portafolio en administración, arrendamiento y venta de inmueble. Fidelizando y aumentando los clientes a través de una entidad rentable, con profesionales a su disposición. Garantizando el pago y la conservación del inmueble, a fin de ser reconocida como la mejor empresa del sector en la región..</p>
 		</div>
+		</div>
 	</div>
+
+	<div id="cont3">
+		<div class="contenido-dere">
+		<div class="blan">
+			<h2>Política de Calidad</h2>
+			<p>Inmobiliaria ANDAPREF SAS garantiza la administración de sus inmuebles en arriendo o venta: con sistema de promoción, selección de arrendatarios, respetando los acuerdos pactados a través de seguros o departamento jurídico, todo establecido bajo fechas puntuales de pagos, conservando sus inmuebles a través de inventarios detallados. Contamos con tecnología, infraestructura, personal competente. Sosteniéndose como empresa de gran nivel, transparente, creíble, rentable, cumpliendo las normas y leyes vigentes. Aseguramos el mejoramiento continuo del sistema de gestión de calidad para la satisfacción del cliente.</p>
+			
+			<h2>Valores Corporativos</h2>
+			<ul>
+			<li>Etica</li>
+			<li>Profesionalismo</li>
+			<li>Respeto a la dignidad humana</li>
+			<li>Especial atención por los intereses de los clientes</li>
+			<li>Compromiso de servicio sobre el interés económico</li>
+			<li>Transparencia en sus operaciones</li>
+			<li>los intereses de la empresa priman sobre los intereses personales</li>
+			<li>Honestidad</li>
+			</ul>
+			</div>
+		</div>
+	</div>
+
 </div>
 </section>
 <footer>
