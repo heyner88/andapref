@@ -310,6 +310,73 @@ footer
 	padding: 0.5em;
 	width: 133px;
 }
+.foto1
+{
+	padding-left: 1.5px;
+	padding-right: 1.5px;
+}
+.foto2
+{
+	padding-left: 1.5px;
+	padding-right: 1.5px;
+}
+.foto3
+{
+	padding-left: 1.5px;
+	padding-right: 1.5px;
+}
+.foto4
+{
+	padding-left: 1.5px;
+	padding-right: 1.5px;
+}
+.foto5
+{
+	padding-left: 1.5px;
+	padding-right: 1.5px;
+}
+.foto1 img
+{
+	width: 100%;
+}
+.foto2 img
+{
+	width: 100%;
+}
+.foto3 img
+{
+	width: 100%;
+	
+}
+.foto4 img
+{
+	width: 100%;
+	
+}
+.foto5 img
+{
+	width: 100%;
+	
+}
+.foto1, .foto2
+{
+	float: left;
+	width: 49%;
+}
+.foto3, .foto4, .foto5
+{
+	float: left;
+	width: 32.5%;
+	margin-bottom: 1.5em;
+}
+.gale
+{
+	width: 100%;
+	padding: 0px;
+	margin-bottom: 1.5em;
+	padding-bottom: 0.5em;
+}
+
 #badera
 {
 	font-size: 20px;
@@ -601,6 +668,7 @@ footer
 	padding: 0.3em;
 	width: 100%;
 }
+
 #ladoiz
 {
 	margin: 1em auto 0px auto;
