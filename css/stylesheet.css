@@ -832,6 +832,13 @@ box-shadow:         1px 1px 5px 0px rgba(50, 50, 50, 0.75);
 	margin-bottom: 2.5em;
 
 }
+#mapa
+{
+	height: 350px;
+	width: 100%;
+	margin: 0px;
+	
+}
 #titulito
 {
 	margin-top: 6.5em;
