@@ -145,6 +145,15 @@ footer
 	text-align: center;
 	width: 85%;
 }
+.contenido2
+{
+	width: 100%;
+}
+.contenido3
+{
+	margin: 0px auto 0px auto;
+	width: 70%;
+}
 .descripcion-basica
 {
 	width: 55.26495726495726%;
@@ -211,6 +220,21 @@ footer
 {
 	border-left: none;
 }
+.det-inmueble ul li
+{
+	display: inline-block;
+	padding-right: 15px;
+}
+.det-inmueble ul li span
+{
+	color: #000;
+	padding-right: 6px;
+}
+.det-inmueble ul li strong
+{
+	color:#6C6C6C;
+	font-weight: 300;
+}
 .imagen-inmuble .carac-inmueble ul li span
 {
 
@@ -230,6 +254,15 @@ footer
 {
 	display: inline-block;
 	vertical-align: top;
+}
+.imagencarac
+{
+	background-image: url(../images/destacada/des_casa1.jpg);
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 414px;
+	width: 100%;
 }
 .footersec
 {
@@ -293,6 +326,23 @@ footer
 #copyright p
 {
 	margin-top: 19px;
+}
+#deta-lado-izq
+{
+	width: 60%;
+}
+#deta-lado-izq p
+{
+	text-align: justify;
+}
+#deta-lado-der
+{
+	width: 30%;
+}
+#deta-lado-izq, #deta-lado-der
+{
+	display: inline-block;
+	vertical-align: top;
 }
 #copyright a
 {
@@ -577,9 +627,14 @@ header #top-lado2
 {
 	display: none;
 }
-.imagen-inmuble
+
+.contenido
 {
-	width: 88%;
+	width: 96%;
+}
+.contenido2
+{
+	width: 100%;
 }
 .descripcion-basica
 {
@@ -597,9 +652,9 @@ header #top-lado2
 {
 	font-size: 18px;
 }
-.contenido
+.imagen-inmuble
 {
-	width: 96%;
+	width: 88%;
 }
 .footersec
 {
