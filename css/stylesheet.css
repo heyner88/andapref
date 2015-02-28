@@ -376,7 +376,10 @@ footer
 	margin-bottom: 1.5em;
 	padding-bottom: 0.5em;
 }
-
+.oculto
+{
+	display: none;
+}
 #badera
 {
 	font-size: 20px;
@@ -786,6 +789,26 @@ box-shadow:         1px 1px 5px 0px rgba(50, 50, 50, 0.75);
 .descripcion-basica
 {
 	width: 88%;
+}
+#deta-lado-izq
+{
+	width: 100%;
+}
+#deta-lado-der
+{
+	width: 100%;
+}
+#deta-lado-der #busquedac
+{
+	width: 100%;
+}
+.foto1
+{
+	width: 100%;
+}
+.foto2, .foto3, .foto4, .foto5
+{
+	display: none;
 }
 }
 
