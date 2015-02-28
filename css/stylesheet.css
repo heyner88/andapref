@@ -194,6 +194,21 @@ footer
 	border: solid #c2c1c1;
 	border-width: 1px 0 0;
 }
+.descripcion-detalle 
+{
+	padding-top: 1.5em;
+	padding-bottom: 1.5em;
+	text-align: justify;
+}
+.descripcion-detalle ul
+{
+	padding-left: 1.5em;
+}
+.descripcion-detalle ul li
+{
+	list-style: circle;
+	line-height: 20px;
+}
 .descripcion-basica span
 {
 	color: #D71E1E;
@@ -771,6 +786,10 @@ box-shadow:         1px 1px 5px 0px rgba(50, 50, 50, 0.75);
 	margin: 0px;
 	margin-bottom: 2.5em;
 
+}
+#titulito
+{
+	margin-top: 6.5em;
 }
 @media screen and (max-width: 1390px)
 {
