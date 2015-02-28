@@ -15,11 +15,69 @@
 <script type="text/javascript" src="js/modernizr.custom.86080.js"></script>
 <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
 <script type="text/javascript" src="js/prefixfree.js"></script>
+<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
+<script type="text/javascript">
+    
+function Localizar()
+{
+     
+        navigator.geolocation.getCurrentPosition(mapa,error);
+}
+
+   
+
+function mapa(pos)
+{
+	var contenedor =document.getElementById("mapa");
+	var latitud = pos.coords.latitude;
+	var Longitud = pos.coords.longitude;
+	var centro = new google.maps.LatLng(latitud,Longitud);
+	var propiedades = 	{
+
+	center: centro, 
+	draggable:true,
+	KeyBoardShortcuts:true,
+	mapTypeControl:true,
+	mapTypeId: google.maps.MapTypeId.ROADMAP,
+	navigationControl: true,
+	scrollWheel:false,		
+	streetViewControl:false,
+	zoom:18,
+
+	};
+
+	var map = new google.maps.Map(contenedor,propiedades);
+	var mkr = new google.maps.Marker({
+		draggable:false,
+		icon: 'imagnes/gps_pos.png',
+		position: centro,
+		map: map,
+		title: 'Usted esta Aqui :D',
+	});
+
+		
+}
+
+function error(errorC)
+{
+
+	if(errorC.code ==0 )
+		alert("Error desconocido");
+	else if (errorC.code ==1 )
+		alert("No me dejaste ubicar");
+	else if (errorC.code ==2 )
+		alert("Posicion no disponible");
+	else if (errorC.code ==3 )
+		alert("me rendi :(");
+
+}
+</script>
 </head>
 <header>
 	<div id="top-lado1"><a href="#"><img src="images/logo.png"></a></div>
 	<div id="top-lado2"><a href="#">correo@inmobiliariaandapref.com</a></div>
 </header>
+<body onload="Localizar()">
 <nav>
 	<div class="container">	
 <a class="toggleMenu" href="#">Menu</a>
@@ -84,22 +142,65 @@
 
 </div>
 <section class="contenido3">
-<div id="deta-lado-izq">
-	<h2>Valor: $100.000</h2>
-			<div class="det-inmueble">
-				<ul>
-					<li><span class="icon-plano"></span><strong>Metros:</strong> 25 m2</li>
-					<li><span class="icon-cuarto"></span><strong>Habitaciones:</strong>7</li>
-					<li><span class="icon-bano"></span><strong>Baños:</strong> 2</li>
-					<li><span class="icon-parqueo"></span><strong>Parqueadero:</strong> NO</li>
-				</ul>
-			</div>
 
-			<div class="descripcion-detalle">
-				<p>una descripción minucionsa de  lo que tiene el inmubele aca si se pueden enloqueces escribiendo una descripción minucionsa de  lo que tiene el inmubele aca si se pueden enloqueces escribiendo una descripción minucionsa de  lo que tiene el inmubele aca si se pueden enloqueces escribiendo</p>
-			</div>
+	<div id="deta-lado-izq">
+	<div id="badera"><h4>Venta</h4></div>
+		<h2>Valor: $100.000</h2>
+				<div class="det-inmueble">
+					<ul>
+						<li><span class="icon-plano"></span><strong>Metros:</strong> 25 m2</li>
+						<li><span class="icon-cuarto"></span><strong>Habitaciones:</strong>7</li>
+						<li><span class="icon-bano"></span><strong>Baños:</strong> 2</li>
+						<li><span class="icon-parqueo"></span><strong>Parqueadero:</strong> NO</li>
+					</ul>
+				</div>
+				<hr class="divi1">
+				<h3>Barrio la Primavera</h3> <!-- aca va elbarrio -->
+
+				<div class="descripcion-detalle">
+					<p>The studio features a queen size bed, plasma TV, DVDs, kitchen with stainless steel appliances, dining roo; space, bathroom with shower, storage space with closets, two large windows, designers furnitures, and access to washer and dryer on each floor of the building.The apartment windows are a bit broken so we don't recommend to open them. The AC is working well though.</p>
+				</div>
+
+				<hr class="divi1">
+
+				<div id="direccion">
+					<h3><span class="icon-location"></span>Ubicación:</h3>
+					<p>En la esquina al lado de la panaderia.</p>
+				</div>
+				 <div id="mapa" style="width: auto; height: 800px; margin: 0 auto;"></div>
+
+
+	</div><!-- cierra la descripcion -->
+
+<div id="deta-lado-der">
+	<div id="busquedac">
+		<h2>Busqueda</h2>
+		<div id="buqueda2">
+		<form>
+			<input type="number" placeholder="Codigo" required>
+			<input type="submit" value="Buscar">
+		</form>
+		<form>
+			<select required>
+				<option value="">Ciudad</option>				
+			</select>
+			<select required>				
+				<option value="">Barrio</option>				
+			</select>
+			<select required>
+				<option value="">Tipo de Inmueble</option>
+			</select>
+			<select required>
+				<option value="">Habitaciones</option>
+			</select>
+			<select required>
+				<option value="">Baños</option>
+			</select>
+			<input type="submit" value="Buscar">
+		</form>
+		</div>
+	</div>
 </div>
-<div id="deta-lado-der"></div>
 </section>
 
 
@@ -138,7 +239,7 @@
         </div>
         </div>
 </footer>
-<body>
+
 </body>
 <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
 <script type="text/javascript" src="js/script-menu.js"></script>

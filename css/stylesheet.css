@@ -310,6 +310,21 @@ footer
 	padding: 0.5em;
 	width: 133px;
 }
+#badera
+{
+	font-size: 20px;
+	margin-top: -55px;
+	width:180px;
+	text-align: center;
+}
+#badera h4
+{
+	background-color: rgba(184, 31, 18, 0.9);
+	color: #fff;
+	padding: 0.8em;
+	margin: 0px;
+
+}
 #copyright img
 {
 	width: 70px;
@@ -333,7 +348,9 @@ footer
 }
 #deta-lado-izq p
 {
+	color: #7C7A7A;
 	text-align: justify;
+	font-weight: 300;
 }
 #deta-lado-der
 {
@@ -505,6 +522,85 @@ footer
 	padding: 0.3em;
 	width: 100%;
 }
+#deta-lado-izq .divi1
+{
+	border: solid #ddd !important;
+	border-width: 1px 0 0 !important;
+	margin-top: 0.8em;
+}
+#deta-lado-der #busquedac
+{
+	background: #fff;
+	border: 1px solid #ddd;
+	margin: 0px auto 0px auto;
+	text-align: center;
+	/*padding: 0.8em;*/
+	width: 80%;
+}
+#deta-lado-der #busquedac #buqueda2
+{
+	background: #fff;
+	padding: 0.8em 1.5em 0.8em 1.5em;
+}
+#deta-lado-izq #direccion span
+{
+	color: #D71E1E;
+	font-size: 33px;
+}
+#deta-lado-der #busquedac h2
+{
+	background:#1A1818;
+	color: #fff;
+	font-weight: 300;
+	text-align: center;
+	margin: -1px 0px 0px 0px;
+	padding: 0.5em 0px 0.5em 0px;
+
+}
+#deta-lado-der #busquedac form
+{
+	margin: 0px auto 0px auto;
+	text-align: center;
+	width: 100%;
+}
+#deta-lado-der #busquedac input[type=number]
+{
+	border:1px solid #ddd;
+	border-radius: 3px;
+	color: #3a3a3a;
+	display: block;
+	padding: 0.3em;
+	margin-top: 1.5em;
+	margin-bottom: 0.5em;
+	width: 98%;
+}
+#deta-lado-der #busquedac input[type=submit]
+{
+	background: #D71E1E;
+	border:none;
+	border-radius: 0.2em;
+	color: #fff;
+	padding: 0.5em 0.8em 0.5em 0.8em;
+	margin-bottom: 0.5em;
+	text-align: center !important;
+	-webkit-transition:.4s;
+
+}
+#deta-lado-der #busquedac input[type=submit]:hover
+{
+	background: #B02525;
+	-webkit-transition:.4s;	
+}
+#deta-lado-der #busquedac select
+{
+	border:1px solid #ddd;
+	border-radius: 3px;
+	color: #3a3a3a;
+	display: block;
+	margin-bottom: 0.5em;
+	padding: 0.3em;
+	width: 100%;
+}
 #ladoiz
 {
 	margin: 1em auto 0px auto;
@@ -598,6 +694,11 @@ box-shadow:         1px 1px 5px 0px rgba(50, 50, 50, 0.75);
 .descripcion-basica
 {
 	width: 56%;
+}
+.contenido3
+{
+	margin: 0px auto 0px auto;
+	width: 90%;
 }
 }
 @media screen and (max-width: 1030px)
