@@ -418,6 +418,61 @@ footer
 	margin: 0px;
 
 }
+#crearpref
+{
+	margin: 60px auto 0px auto;
+	text-align: center;
+	width: 100%;
+}
+#crearpref input[type=number]
+{
+	border:none;
+	border:1px solid #ddd;
+	border-radius: 0.3em;
+	color: #333;
+	margin-bottom: 0.5em;
+	padding: 0.5em;
+	width: 80%;
+}
+#crearpref input[type=text]
+{
+	border:none;
+	border:1px solid #ddd;
+	border-radius: 0.3em;
+	color: #333;
+	margin-bottom: 0.5em;
+	padding: 0.5em;
+	width: 80%;
+}
+#crearpref select
+{
+	border:none;
+	border:1px solid #ddd;
+	border-radius: 0.3em;
+	color: #333;
+	margin-bottom: 0.5em;
+	padding: 0.5em;
+	width: 82%;
+}
+#crearpref textarea
+{
+	border:none;
+	border:1px solid #ddd;
+	border-radius: 0.3em;
+	color: #333;
+	text-align: left;
+	height: 65px;
+	margin-bottom: 0.5em;
+	padding: 0.5em;
+	width: 82%;
+}
+#crear1, #crear2
+{
+	display: inline-block;
+	vertical-align: top;
+	padding: 0.8em;
+	width: 45%;
+}
 #copyright img
 {
 	width: 70px;
@@ -967,6 +1022,10 @@ header #top-lado1 img
 header #top-lado2
 {
 	display: none;
+}
+#crear1, #crear2
+{
+	width: 95%;
 }
 #sesionini
 {
