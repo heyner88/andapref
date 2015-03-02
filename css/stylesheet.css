@@ -839,6 +839,68 @@ box-shadow:         1px 1px 5px 0px rgba(50, 50, 50, 0.75);
 	margin: 0px;
 	
 }
+#sesionp
+{
+	text-align: center;
+	margin: 85px auto 0px auto;
+}
+#sesionini
+{
+	border:1px solid #ddd;
+	border-radius: 0.5em;
+	text-align: center;
+	padding: 0.8em;
+	margin: 0px auto 80px auto;
+	width: 350px;
+}
+#sesionini h2
+{
+	background: #D71E1E;
+	color: #fff;
+	font-weight: 300;
+	margin:0px;
+	padding: 0.5em;
+}
+#sesionini img
+{
+	width: 188px;
+	padding: 0.8em;
+}
+#sesionini input[type=text]
+{
+	border-radius: 00.2em;
+	border: none;
+	border:1px solid #ddd;
+	margin-bottom: 0.5em;
+	padding: 0.5em;	
+	width: 95%;
+
+}
+#sesionini input[type=password]
+{
+	border-radius: 00.2em;
+	border: none;
+	border:1px solid #ddd;
+	margin-bottom: 0.5em;
+	padding: 0.5em;	
+	width: 95%;
+
+}
+#sesionini input[type=submit]
+{
+	background: #D71E1E;
+	border-radius: 00.2em;
+	border: none;
+	border:1px solid #D71E1E;
+	color: #fff;
+	margin-bottom: 0.5em;
+	padding: 0.5em;	
+	-webkit-transition:.4s;
+}
+#sesionini input[type=submit]:hover
+{
+	background: #931414;
+}
 #titulito
 {
 	margin-top: 6.5em;
@@ -906,7 +968,10 @@ header #top-lado2
 {
 	display: none;
 }
-
+#sesionini
+{
+	width: 250px;
+}
 .contenido
 {
 	width: 96%;
