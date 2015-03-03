@@ -29,7 +29,7 @@
 		<a href="">Ligar</a>		
 	</li>
 	<li>
-		<a href="listar">Listar</a>		
+		<a href="">Listar</a>		
 	</li>
 	<li>
 		<a href="#">Estados de Cuenta</a>
@@ -45,42 +45,35 @@
 </ul>
 </div>
 </nav>
-<section id="crearpref">
-<div id="crear1">
-	<h2>Crear Inmueble</h2>
-	<form>
-		<input type="number" placeholder="Codigo" required>
-		<select>
-			<option value="">Tipo de Inmubele</option>
-		</select>
-		<input type="number" placeholder="Mt2" required>
-		<input type="number" placeholder="Habitaciones" required>
-		<input type="number" placeholder="Baños" required>
-		<select>
-			<option value="">Parqueadero</option>
-			<option value="">SI</option>
-			<option value="">NO</option>
-		</select>
-		<input type="number" placeholder="Valor" required>
-		<input type="text" placeholder="Barrio" required>
-		<p>Ubicación de Google Maps</p>
-		<input type="number" placeholder="Ubicacionen X" required>
-		<input type="number" placeholder="Ubicacionen Y" required>
-	
-</div>
-<div id="crear2">
-	<h2>Descrpciones</h2>
-		<textarea placeholder="Descripción 1" required></textarea>
-		<textarea placeholder="Descripción 2" required></textarea>
-		<p>Fotografias maximo 10</p>
-		<div class="subir"><input type="file"> <a href="">Mas</a></div>
-		<div class="subir"><input type="file"> <a href="">Mas</a></div>
-		<div class="subir"><input type="file"> <a href="">Mas</a></div>
-	<input type="submit" value="Guardar">
-	</form>
-</div>
+<section id="listart">
+<h2>Listar Inmuebles</h2>	
+<table>
+	<thead>
+		<td>Codigo</td>
+		<td>T/Servicio</td>
+		<td>Id Propietario</td>
+		<td>Id Arrendatario</td>
+		<td>Bloquear</td>
+		<td>Desactivar</td>
+		<td>Editar</td>
+		<td>ligar</td>
+	</thead>
+	<tbody>
+	<tr>
+		<td>001</td>
+		<td>Arriendo</td>
+		<td>80360011</td>
+		<td>1032406721</td>
+		<td><input type="checkbox" name="bloqueo" value=""></td>
+		<td><input type="checkbox" name="bloqueo" value=""></td>
+		<td><a href="">Editar</a></td>
+		<td><a href="">ligar</a></td>
+		
+	</tr>
+		
+	</tbody>
+</table>
 
-	
 </section>
 <footer>
 <div id="foot">

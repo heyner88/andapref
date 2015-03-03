@@ -395,6 +395,21 @@ footer
 {
 	display: none;
 }
+.subir
+{
+	display: block;
+}
+.subir a
+{
+	background: #D71E1E;
+	border-radius: 0.3em;
+	color: #fff;
+	padding: 0.5em;
+}
+.subir input[type=file]
+{
+	margin-bottom:0.8em; 
+}
 #cont2
 {
 	display: none;
@@ -472,6 +487,14 @@ footer
 	vertical-align: top;
 	padding: 0.8em;
 	width: 45%;
+}
+#crear2 input[type=submit]
+{
+	background: #1A1818;
+	border-radius: 0.3em;
+	border: none;
+	color: #fff;
+	padding: 0.5em;
 }
 #copyright img
 {
@@ -714,6 +737,18 @@ footer
 	margin-bottom: 0.5em;
 	padding: 0.3em;
 	width: 100%;
+}
+#listart
+{
+	margin: 80px auto 0px auto;
+	text-align: center;
+	width: 100%;
+}
+#listart table
+{
+	margin: 0px auto 0px auto;
+	padding: 0.8em;
+	width: 90%;
 }
 #deta-lado-izq .divi1
 {
