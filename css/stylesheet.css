@@ -746,9 +746,60 @@ footer
 }
 #listart table
 {
-	margin: 0px auto 0px auto;
+	margin: 0px auto 20px auto;
 	padding: 0.8em;
 	width: 90%;
+}
+#listart #busquedas
+{
+	padding: 0.8em;
+}
+#listart #busquedas input[type=number]
+{
+	padding: 0.5em;
+}
+#listart #busquedas select
+{
+	padding: 0.5em;
+}
+#listart #busquedas input[type=submit]
+{
+	background:#1A1818;
+	border-radius: 0.3em;
+	border:none;
+	color: #fff;
+	padding: 0.5em;
+
+}
+#listart thead
+{
+	background: #D71E1E;
+	color:#fff;
+}
+#listart thead td
+{
+	height: 45px;
+}
+#listart tbody td
+{
+	background: #f2f2f2;
+	font-size: 14px;
+	height: 45px;
+}
+#listart tbody td a
+{
+	background: #1A1818;
+	border-radius: 0.2em;
+	color: #fff;
+	padding: 0.3em;
+}
+#listart tbody td a:hover
+{
+	background: #D71E1E;
+}
+#listart tbody tr
+{
+	border-bottom: 1px solid #ddd;
 }
 #deta-lado-izq .divi1
 {

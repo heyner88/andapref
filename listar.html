@@ -20,7 +20,7 @@
 <a class="toggleMenu" href="#">Menu</a>
 <ul class="nav">
 	<li  class="test">
-		<a href="">Crear Inmueble</a>
+		<a href="adminpref">Crear Inmueble</a>
 	</li>
 	<li>
 		<a href="">Crear Proveedor</a>		
@@ -47,6 +47,16 @@
 </nav>
 <section id="listart">
 <h2>Listar Inmuebles</h2>	
+<div id="busquedas">
+	<form>		
+		<label>Busquedas por: </label><input type="number" placeholder="Codigo"> <input type="number" placeholder="Id Propietario"> <select>
+			<option>Selecciona</option>
+			<option>Bloqueados</option>
+			<option>Desactivados</option>
+		</select> 
+		<input type="submit" value="Buscar">
+	</form>
+</div>
 <table>
 	<thead>
 		<td>Codigo</td>
@@ -60,6 +70,28 @@
 	</thead>
 	<tbody>
 	<tr>
+		<td>003</td>
+		<td>Venta</td>
+		<td>80360011</td>
+		<td></td>
+		<td><input type="checkbox" name="bloqueo" value=""></td>
+		<td><input type="checkbox" name="bloqueo" value=""></td>
+		<td><a href="">Editar</a></td>
+		<td></td>
+		
+	</tr>
+	<tr>
+		<td>002</td>
+		<td>Arriendo</td>
+		<td>80360011</td>
+		<td></td>
+		<td><input type="checkbox" name="bloqueo" value=""></td>
+		<td><input type="checkbox" name="bloqueo" value=""></td>
+		<td><a href="">Editar</a></td>
+		<td><a href="">ligar</a></td>
+		
+	</tr>
+	<tr>
 		<td>001</td>
 		<td>Arriendo</td>
 		<td>80360011</td>
@@ -67,7 +99,7 @@
 		<td><input type="checkbox" name="bloqueo" value=""></td>
 		<td><input type="checkbox" name="bloqueo" value=""></td>
 		<td><a href="">Editar</a></td>
-		<td><a href="">ligar</a></td>
+		<td></td>
 		
 	</tr>
 		
