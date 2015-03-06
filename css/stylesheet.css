@@ -410,6 +410,33 @@ footer
 {
 	margin-bottom:0.8em; 
 }
+#busq1, #busq2
+{
+	display: inline-block;
+	vertical-align: top;
+	width: 43%;
+	padding-bottom: 0.8em;
+}
+#busq1
+{
+	text-align: left;
+}
+#busq1 input[type=number]
+{
+	width: 158px;
+}
+#busq1 input[type=date]
+{
+	padding: 0.3em
+}
+#busq2 input[type=submit]
+{
+	background: #1A1818;
+	border-radius: 0.3em;
+	border: none;
+	color: #fff;
+	padding: 0.5em;
+}
 #cont2
 {
 	display: none;
