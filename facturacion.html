@@ -45,42 +45,76 @@
 </ul>
 </div>
 </nav>
-<section id="listart2">
-<h2>Ligar Inmueble</h2>	
-<div id="crear1">
-	<form>
-		<p>Seleccione codigo a ligar</p>
-		<input type="number" placeholder="Codigo" required="">
-		<input type="number" placeholder="ID de Propietario" required="" disabled="">
-		<input type="text" placeholder="Propietario" required="" disabled="">
-		<input type="number" placeholder="Valor del Inmueble" required="" >
-		<input type="number" placeholder="Porcentaje de recargo" required="">
-		<input type="number" placeholder="Valor de Administracion" required="">
-		
-	
-	
-</div>
-
-<div id="crear2">
-	
-		<p>Información del Arrendatario</p>
-		<input type="number" placeholder="Codigo" required="" disabled="">
-		<input type="number" placeholder="ID del Arrendatario" required="">
-		<input type="text" placeholder="Nombre" required="">
-		<input type="text" placeholder="Apellido" required="">
-		<input type="email" placeholder="Correo Electronico">
-		<input type="text" placeholder="Telefono" required="">
-		<input type="text" placeholder="Movil" required="">
-		<p>Fecha de Inicio</p>
-		<input type="date" placeholder="" required="">
-		<br>
-		<input type="submit" value="Guardar">	
-		
-	
+<section id="listart">
+<h2>Facturación</h2>	
+<div id="busq1"> 
+<div id="busquedas">
+	<form>		
+		<label>Busquedas por: </label><input type="number" placeholder="Codigo"> <input type="number" placeholder="Id Arrendatario">
+		<input type="submit" value="Buscar">
+	</form>
+	<br>
+	<form>		
+		<label>Busquedas por: 
+		<input type="date"> <input type="date">
+		<input type="submit" value="Buscar">
 	</form>
 </div>
+</div>
+<div id="busq2">
+<h2>Generar facturación</h2>
+<form>		
+		<p>Seleccione carpeta</p>
+		<label>Periodo: 
+		<input type="date"> <input type="date">
+		<input type="submit" value="Generar">
+	</form>
 
-
+</div>
+<table>
+	<thead>
+		<td>Codigo</td>
+		<td>Id Arrendatario</td>
+		<td>Periodo Inicial</td>
+		<td>Periodo Final</td>
+		<td>Factura</td>
+		<td>Editar</td>
+		
+	</thead>
+	<tbody>
+	<tr>
+		<td>003</td>
+		<td>80360011</td>
+		<td>12-02-2015</td>
+		<td>12-02-2015</td>
+		<td><input type="file" disabled=""></td>
+		<td><a href="">Editar</a></td>
+		
+		
+	</tr>
+	<tr>
+		<td>002</td>
+		<td>80360011</td>
+		<td>12-02-2015</td>
+		<td>12-02-2015</td>
+		<td><input type="file" disabled=""></td>
+		<td><a href="">Editar</a></td>
+		
+		
+	</tr>
+	<tr>
+		<td>001</td>
+		<td>80360011</td>
+		<td>12-02-2015</td>
+		<td>12-02-2015</td>
+		<td><input type="file"></td>
+		<td><a href="">Guardar</a></td>
+		
+		
+	</tr>
+		
+	</tbody>
+</table>
 
 </section>
 
