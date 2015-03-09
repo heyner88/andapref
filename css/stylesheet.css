@@ -1119,6 +1119,10 @@ box-shadow:         1px 1px 5px 0px rgba(50, 50, 50, 0.75);
 	padding: 0.5em;	
 	-webkit-transition:.4s;
 }
+#solicitudes
+{
+	padding-top: 3.5em;
+}
 #sesionini input[type=submit]:hover
 {
 	background: #931414;
