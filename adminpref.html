@@ -8,6 +8,7 @@
 <link rel="stylesheet" href="css/stylesheet.css" />
 <link rel="stylesheet" href="css/style1.css" />
 <link rel="stylesheet" type="text/css" href="css/style-menu.css">
+<link rel="stylesheet" type="text/css" href="css/msj.css">
 <script type="text/javascript" src="js/modernizr.custom.86080.js"></script>
 </head>
 <body>
@@ -16,78 +17,79 @@
 	<div id="top-lado2"><a href="#">correo@inmobiliariaandapref.com</a></div>
 </header>
 <nav>
-	<div class="container">	
+	<div class="container">
 <a class="toggleMenu" href="#">Menu</a>
 <ul class="nav">
 	<li  class="test">
 		<a href="adminpref">Crear Inmueble</a>
 	</li>
 	<li>
-		<a href="crear-proveedor">Crear Proveedor</a>		
+		<a href="crear-proveedor">Crear Proveedor</a>
 	</li>
 	<li>
-		<a href="ligar">Ligar</a>		
+		<a href="ligar">Ligar</a>
 	</li>
 	<li>
-		<a href="listar">Listar</a>		
+		<a href="listar">Listar</a>
 	</li>
 	<li>
 		<a href="estadosadmin">Estados de Cuenta</a>
-	</li>	
+	</li>
 	<li>
 		<a href="facturacion">Facturación</a>
-	</li>	
+	</li>
 	<li>
 		<a href="contacto">Cerrar Sesión</a>
 	</li>
 
-	
+
 </ul>
 </div>
 </nav>
 <section id="crearpref">
 <div id="crear1">
 	<h2>Crear Inmueble</h2>
-	<form>
-		<input type="number" placeholder="Codigo" required>
-		<input type="number" placeholder="Id Propietario" required>
-		<select>
+	<form id="nuevo_inm">
+		<input type="number" placeholder="Codigo" name="codigo" required>
+		<input type="number" placeholder="Id Propietario" name="id_prop" required>
+		<select name="tipo">
 			<option value="">Tipo de Inmubele</option>
+			<option>Tipo1</option>
+			<option>Tipo2</option>
 		</select>
-		<input type="number" placeholder="Mt2" required>
-		<input type="number" placeholder="Habitaciones" required>
-		<input type="number" placeholder="Baños" required>
-		<select>
+		<input type="number" placeholder="Mt2" name="mt2" required>
+		<input type="number" placeholder="Habitaciones" name="habitaciones" required>
+		<input type="number" placeholder="Baños" name="banos" required>
+		<select name="parqueadero">
 			<option value="">Parqueadero</option>
-			<option value="">SI</option>
-			<option value="">NO</option>
+			<option>SI</option>
+			<option>NO</option>
 		</select>
-		<select>
+		<select name="servicio">
 			<option value="">Servicio</option>
-			<option value="">Arriendo</option>
-			<option value="">Venta</option>
+			<option>Arriendo</option>
+			<option>Venta</option>
 		</select>
-		<input type="number" placeholder="Valor" required>
-		<input type="text" placeholder="Barrio" required>
+		<input type="number" placeholder="Valor" name="valor" required>
+		<input type="text" placeholder="Barrio" name="barrio" required>
 		<p>Ubicación de Google Maps</p>
-		<input type="number" placeholder="Ubicacionen X" required>
-		<input type="number" placeholder="Ubicacionen Y" required>
-	
+		<input type="text" placeholder="Ubicación en X" name="ux" required>
+		<input type="text" placeholder="Ubicación en Y" name="uy" required>
+
 </div>
 <div id="crear2">
-	<h2>Descrpciones</h2>
-		<textarea placeholder="Descripción 1" required></textarea>
-		<textarea placeholder="Descripción 2" required></textarea>
+	<h2>Descripciones</h2>
+		<textarea placeholder="Descripción 1" name="des1" required></textarea>
+		<textarea placeholder="Descripción 2" name="des2" required></textarea>
 		<h2>Fotografia destacada</h2>
-		<div class="subir"><input type="file"></div>		
+		<div class="subir"><input type="file" id="destaca"></div>
 		<p>Fotografias maximo 10</p>
-		<div class="subir"><input type="file"> <a href="">Mas</a></div>
-		<div class="subir"><input type="file"> <a href="">Mas</a></div>
+		<div class="subir"><input type="file"> <a href="javascript:void(0)"  class="agrega">Mas</a></div>
 	<input type="submit" value="Guardar">
 	</form>
 </div>
 
-	
+
 </section>
 <!-- <footer>
 <div id="foot">
@@ -112,7 +114,7 @@
 	<h2>Con el respaldo de:</h2>
 	<img src="images/seguros_bolivar.png">
 	<img src="images/libertador.png">
-	
+
 </div>
 	<hr class="divi1">
 	<div id="copyright">
@@ -124,6 +126,7 @@
         </div>
 </footer> -->
 </body>
-<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
 <script type="text/javascript" src="js/script-menu.js"></script>
+<script type="text/javascript" src="js/script_inmueble.js"></script>
 </html>
