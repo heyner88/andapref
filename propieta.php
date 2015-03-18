@@ -1,15 +1,24 @@
+<?php
+session_start();
+if (isset($_SESSION['tipousu']) && $_SESSION['tipousu']=='propietario') {
+  header('Location: estados');
+}
+?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width , initial-scale=1 ,maximum-scale=1 user-scalable=no" />
+<meta name="keywords" lang="es" content="">
+<meta name="robots" content="All">
+<meta name="description" lang="es" content="">
 <title>Inmobiliaria Andapref</title>
 <link rel="stylesheet" href="css/normalize.css" />
 <link rel="stylesheet" href="css/stylesheet.css" />
 <link rel="stylesheet" href="css/style1.css" />
+<link rel="stylesheet" href="css/responsivemobilemenu.css" type="text/css"/>
 <link rel="stylesheet" type="text/css" href="css/style-menu.css">
-<link rel="stylesheet" type="text/css" href="css/msj.css">
-<script type="text/javascript" src="js/modernizr.custom.86080.js"></script>
+<link rel="stylesheet" href="css/msj.css" />
 </head>
 <body>
 <header>
@@ -17,56 +26,23 @@
 	<div id="top-lado2"><a href="#">correo@inmobiliariaandapref.com</a></div>
 </header>
 <nav>
-	<div class="container">
-<a class="toggleMenu" href="#">Menu</a>
-<ul class="nav">
-	<li  class="test">
-		<a href="adminpref">Crear Inmueble</a>
-	</li>
-	<li>
-		<a href="crear-proveedor">Crear Proveedor</a>
-	</li>
-	<li>
-		<a href="ligar">Ligar</a>
-	</li>
-	<li>
-		<a href="listar">Listar</a>
-	</li>
-	<li>
-		<a href="estadosadmin">Estados de Cuenta</a>
-	</li>
-	<li>
-		<a href="facturacion">Facturación</a>
-	</li>
-	<li>
-		<a href="contacto">Cerrar Sesión</a>
-	</li>
-</ul>
-</div>
-</nav>
-<section id="crearpref">
-<div id="crear1">
-	<h2>Crear Proveedor</h2>
-	<form id="nuevo_prov">
-		<input type="number" placeholder="Id Propietario" name="id_prop" required>
-		<input type="text" placeholder="Nombre" name="nombre" required>
-		<input type="text" placeholder="Apellido" name="apellido" required>
-		<input type="text" placeholder="Telefono fijo" name="telefono" required>
-		<input type="text" placeholder="Movil" name="movil" required>
-		<input type="text" placeholder="Email" name="email">
-		<input type="text" placeholder="Direccion" name="direccion" required>
-</div>
 
-<div id="crear2">
-	<h2>Contrato</h2>
-		<div class="subir"><input type="file" name="contrato[]"> <a href="javascript:void(0)" class="agrega">Mas</a></div>
-	<input type="submit" value="Guardar">
+</nav>
+<section>
+<div id="sesionp">
+<div id="sesionini">
+	<form id="logueo">
+		<h2>Inicio de Sesión</h2>
+		<h3>Propietarios</h3>
+		<img src="images/logo.png">
+		<input type="text" placeholder="Usuario" name="usuario" required>
+		<input type="password" placeholder="Contraseña" name="password" required>
+		<input type="submit" value="Iniciar">
 	</form>
 </div>
-
-
+</div>
 </section>
-<!-- <footer>
+<footer>
 <div id="foot">
 <div class="footersec">
 	<h2>Información de contacto</h2>
@@ -99,9 +75,10 @@
             </div>
         </div>
         </div>
-</footer> -->
+</footer>
 </body>
-<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+<script src ='js/jquery-1.7.2.min.js'></script>
+<script type="text/javascript" src="js/modernizr.custom.86080.js"></script>
 <script type="text/javascript" src="js/script-menu.js"></script>
-<script type="text/javascript" src="js/script_propietario.js"></script>
+<script src="js/script_login.js"></script>
 </html>

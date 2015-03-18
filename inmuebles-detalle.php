@@ -1,3 +1,14 @@
+<?php
+	include('libs/conexion.php');
+	@$codigo = $_POST['codigo'];
+	if(!isset($codigo))
+		 header('Location: inmuebles-arriendo');
+	else
+	{
+		$sel = mysql_query("SELECT * FROM inmuebles WHERE Cod_inm='$codigo' ");
+		$resp = mysql_fetch_object($sel);
+	}
+?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -12,35 +23,33 @@
 <link rel="stylesheet" href="css/style1.css" />
 <link rel="stylesheet" href="css/responsivemobilemenu.css" type="text/css"/>
 <link rel="stylesheet" type="text/css" href="css/style-menu.css">
-<script type="text/javascript" src="js/modernizr.custom.86080.js"></script>
 <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
-<script type="text/javascript" src="js/prefixfree.js"></script>
+<script type="text/javascript" src="js/modernizr.custom.86080.js"></script>
 <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
 <script type="text/javascript">
-    
+
 function Localizar()
 {
-     
+
         navigator.geolocation.getCurrentPosition(mapa,error);
 }
 
-   
 
 function mapa(pos)
 {
 	var contenedor =document.getElementById("mapa");
-	var latitud = pos.coords.latitude;
-	var Longitud = pos.coords.longitude;
+	var latitud =	<?php echo$resp->X_inm; ?>;
+	var Longitud = <?php echo$resp->Y_inm; ?>;
 	var centro = new google.maps.LatLng(latitud,Longitud);
 	var propiedades = 	{
 
-	center: centro, 
+	center: centro,
 	draggable:true,
 	KeyBoardShortcuts:true,
 	mapTypeControl:true,
 	mapTypeId: google.maps.MapTypeId.ROADMAP,
 	navigationControl: true,
-	scrollWheel:false,		
+	scrollWheel:false,
 	streetViewControl:false,
 	zoom:18,
 
@@ -55,7 +64,7 @@ function mapa(pos)
 		title: 'Usted esta Aqui :D',
 	});
 
-		
+
 }
 
 function error(errorC)
@@ -79,7 +88,7 @@ function error(errorC)
 </header>
 <body onload="Localizar()">
 <nav>
-	<div class="container">	
+	<div class="container">
 <a class="toggleMenu" href="#">Menu</a>
 <ul class="nav">
 	<li  class="test">
@@ -87,7 +96,7 @@ function error(errorC)
 	</li>
 	<li>
 		<a href="nuestra-empresa">Nosotros</a>
-		
+
 	</li>
 	<li>
 		<a href="#">Inmuebles</a>
@@ -115,7 +124,7 @@ function error(errorC)
 			<li>
 				<a href="requisistos-inmueble-venta">Requisitos para dejar un inmueble en Venta</a>
 			</li>
-			
+
 		</ul>
 	</li>
 	<li>
@@ -133,35 +142,46 @@ function error(errorC)
 		<a href="contacto">Contáctenos</a>
 	</li>
 
-	
+
 </ul>
 </div>
 </nav>
 <section class="contenido2">
-<div class="imagencarac">
+<div class="imagencarac" <?php echo'style="background-image:url('.substr($resp->Img_inm,1).')" '; ?>>
 
 </div>
 <section class="contenido3">
 
 	<div id="deta-lado-izq">
-	<div id="badera"><h4>Venta</h4></div>
-		<h2>Valor: $100.000</h2>
+	<div id="badera"><h4><?php echo$resp->Serv_inm; ?></h4></div>
+		<h2>Valor: $<?php echo$resp->Val_inm; ?></h2>
 				<div class="det-inmueble">
 					<ul>
-						<li><span class="icon-plano"></span><strong>Metros:</strong> 25 m2</li>
-						<li><span class="icon-cuarto"></span><strong>Habitaciones:</strong>7</li>
-						<li><span class="icon-bano"></span><strong>Baños:</strong> 2</li>
-						<li><span class="icon-parqueo"></span><strong>Parqueadero:</strong> NO</li>
+						<li><span class="icon-plano"></span><strong>Metros:</strong> <?php echo$resp->Mt2_inm; ?> m2</li>
+						<li><span class="icon-cuarto"></span><strong>Habitaciones:</strong><?php echo$resp->Habit_inm; ?></li>
+						<li><span class="icon-bano"></span><strong>Baños:</strong> <?php echo$resp->Ban_inm; ?></li>
+						<li><span class="icon-parqueo"></span><strong>Parqueadero:</strong> <?php echo$resp->Parq_inm; ?></li>
 					</ul>
 				</div>
 				<hr class="divi1">
-				<h3>Barrio la Primavera</h3> <!-- aca va elbarrio -->
+				<h3>Barrio <?php echo$resp->Barr_inm; ?></h3>
 
 				<div class="descripcion-detalle">
-					<p>The studio features a queen size bed, plasma TV, DVDs, kitchen with stainless steel appliances, dining roo; space, bathroom with shower, storage space with closets, two large windows, designers furnitures, and access to washer and dryer on each floor of the building.The apartment windows are a bit broken so we don't recommend to open them. The AC is working well though.</p>
+					<p><?php echo$resp->Desc2_inm; ?></p>
 				</div>
 				<div class="gale">
-					<a href="" class="foto1"><img src="images/galeria/fotoc1.jpg"></a>
+					<?php
+						$sel2 = mysql_query("SELECT * FROM galeria WHERE Cod_inm='$codigo' ");
+						$i=1;
+						while($resp2=mysql_fetch_object($sel2))
+						{
+								echo'<a href="" class="foto'.$i.'"><img src="'.substr($resp2->Arc_gal,1).'"></a>';
+								$i++;
+								if($i==6)
+									$i=1;
+						}
+					?>
+					<!-- <a href="" class="foto1"><img src="images/galeria/fotoc1.jpg"></a>
 					<a href="" class="foto2"><img src="images/galeria/fotoc2.jpg"></a>
 					<a href="" class="foto3"><img src="images/galeria/fotoc3.jpg"></a>
 					<a href="" class="foto4"><img src="images/galeria/fotoc4.jpg"></a>
@@ -172,13 +192,13 @@ function error(errorC)
 					<a href="" class="foto3"><img src="images/galeria/fotoc3.jpg"></a>
 					<a href="" class="foto4"><img src="images/galeria/fotoc4.jpg"></a>
 					<a href="" class="foto5"><img src="images/galeria/fotoc5.jpg"></a>
-					</div>
+					</div> -->
 				</div>
 				<hr class="divi1">
 
 				<div id="direccion">
 					<h3><span class="icon-location"></span>Ubicación:</h3>
-					<p>En la esquina al lado de la panaderia.</p>
+					<!-- <p></p> -->
 				</div>
 				 <div id="mapa"></div>
 
@@ -195,10 +215,10 @@ function error(errorC)
 		</form>
 		<form>
 			<select required>
-				<option value="">Ciudad</option>				
+				<option value="">Ciudad</option>
 			</select>
-			<select required>				
-				<option value="">Barrio</option>				
+			<select required>
+				<option value="">Barrio</option>
 			</select>
 			<select required>
 				<option value="">Tipo de Inmueble</option>
@@ -241,7 +261,7 @@ function error(errorC)
 	<h2>Con el respaldo de:</h2>
 	<img src="images/seguros_bolivar.png">
 	<img src="images/libertador.png">
-	
+
 </div>
 	<hr class="divi1">
 	<div id="copyright">

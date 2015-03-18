@@ -1,3 +1,12 @@
+<?php
+session_start();
+if (!isset($_SESSION['tipousu'])){
+  	header('Location: admin');
+}
+else
+	if($_SESSION['tipousu']!='admin')
+		header('Location: admin');
+?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -52,7 +61,7 @@
 		<a href="facturacion">Facturación</a>
 	</li>
 	<li>
-		<a href="contacto">Cerrar Sesión</a>
+		<a href="libs/logout">Cerrar Sesión</a>
 	</li>
 
 
@@ -60,70 +69,62 @@
 </div>
 </nav>
 <section id="listart">
-<h2>Estados de Cuenta</h2>
-<div id="busq1">
+<h2>Listar Inmuebles</h2>
 <div id="busquedas">
 	<form>
-		<label>Busquedas por: </label><input type="number" placeholder="Codigo"> <input type="number" placeholder="Id Propietario">
+		<label>Busquedas por: </label><input type="number" placeholder="Codigo"> <input type="number" placeholder="Id Propietario"> <select>
+			<option>Selecciona</option>
+			<option>Bloqueados</option>
+			<option>Desbloqueados</option>
+			<option>Activados</option>
+			<option>Desactivados</option>
+		</select>
 		<input type="submit" value="Buscar">
 	</form>
-	<br>
-	<form>
-		<label>Busquedas por:
-		<input type="date"> <input type="date">
-		<input type="submit" value="Buscar">
-	</form>
-</div>
-</div>
-<div id="busq2">
-<h2>Importar Estados</h2>
-<form>
-		<p>Seleccione carpeta</p>
-		<label>Periodo:
-		<input type="date"> <input type="date">
-		<input type="submit" value="Importar">
-	</form>
-
 </div>
 <table>
 	<thead>
 		<td>Codigo</td>
+		<td>T/Servicio</td>
 		<td>Id Propietario</td>
-		<td>Periodo Inicial</td>
-		<td>Periodo Final</td>
+		<td>Id Arrendatario</td>
+		<td>Bloquear</td>
 		<td>Desactivar</td>
 		<td>Editar</td>
-
+		<td>ligar</td>
 	</thead>
 	<tbody>
 	<tr>
 		<td>003</td>
+		<td>Venta</td>
 		<td>80360011</td>
-		<td>12-02-2015</td>
-		<td>12-02-2015</td>
-		<td><input type="file" disabled=""></td>
+		<td></td>
+		<td><input type="checkbox" name="bloqueo" value=""></td>
+		<td><input type="checkbox" name="bloqueo" value=""></td>
 		<td><a href="">Editar</a></td>
-
+		<td></td>
 
 	</tr>
 	<tr>
 		<td>002</td>
+		<td>Arriendo</td>
 		<td>80360011</td>
-		<td>12-02-2015</td>
-		<td>12-02-2015</td>
-		<td><input type="file" disabled=""></td>
+		<td></td>
+		<td><input type="checkbox" name="bloqueo" value=""></td>
+		<td><input type="checkbox" name="bloqueo" value=""></td>
 		<td><a href="">Editar</a></td>
-
+		<td><a href="">ligar</a></td>
 
 	</tr>
 	<tr>
 		<td>001</td>
+		<td>Arriendo</td>
 		<td>80360011</td>
-		<td>12-02-2015</td>
-		<td>12-02-2015</td>
-		<td><input type="file"></td>
-		<td><a href="">Guardar</a></td>
-
+		<td>1032406721</td>
+		<td><input type="checkbox" name="bloqueo" value=""></td>
+		<td><input type="checkbox" name="bloqueo" value=""></td>
+		<td><a href="">Editar</a></td>
+		<td></td>
 
 	</tr>
 

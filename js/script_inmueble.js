@@ -1,5 +1,23 @@
 $(document).ready(function(){
 maxf = 0;
+tempcod=0,tempprop=0;
+
+	$('select[name=departamento]').val(50);
+	ciudades()
+
+	$('select[name=departamento]').on('change',function(){
+		ciudades();
+	})
+
+	function ciudades()
+	{
+		$.getJSON('libs/acc_inmueble',{opc:'ciudad',departamento:$('select[name=departamento]').val()}).done(function(data){
+			$('select[name=ciudad] option').eq(0).nextAll().remove();
+			$.each(data.Ciudades,function(i,dat){
+				$('select[name=ciudad]').append('<option value="'+dat.id+'">'+dat.nombre+'</option>');
+			})
+		})
+	}
 
 	$('.agrega').live('click',function(){
 		if(maxf<9)
@@ -60,14 +78,15 @@ maxf = 0;
 			        setTimeout(function() {
 			            $("#rp").fadeOut();
 			            $('#fondo').fadeOut('fast');
-			        }, 3000);
+			        }, 2500);
 			        $('input').not('input[type=submit]').val('');
 			        $('textarea').val('');
 			        $('select').val('');
 			        $('.tmp').remove();
+			        $('select[name=ciudad] option').eq(0).nextAll().remove();
 			    }
 			    else
-			    	if(data.status == 'error')
+			    	if(data.status == 'error2')
 			    	{
 			    		$('#fondo').remove();
 						$('body').append("<div class='fondo' id='fondo' style='display:none;'></div>");
@@ -80,10 +99,40 @@ maxf = 0;
 				        setTimeout(function() {
 				            $("#rp").fadeOut();
 				            $('#fondo').fadeOut('fast');
-				        }, 3000);
+				        }, 2500);
+				        $('input[name=codigo]').css('background','rgba(250, 128, 114, 0.21)');
+				        tempcod =  $('input[name=codigo]').val();
+			    	}
+			    else
+			    	if(data.status == 'error1')
+			    	{
+			    		$('#fondo').remove();
+						$('body').append("<div class='fondo' id='fondo' style='display:none;'></div>");
+						$('#fondo').append("<div class='rp' style='display: none; text-align: center' id='rp'><span>Error! - El Id Propietario no existe</span></div>");
+						setTimeout(function() {
+				        	$('#fondo').fadeIn('fast',function(){
+				            $('#rp').animate({'top':'350px'},50).fadeIn();
+				         	});
+				        }, 400);
+				        setTimeout(function() {
+				            $("#rp").fadeOut();
+				            $('#fondo').fadeOut('fast');
+				        }, 2500);
+				        $('input[name=id_prop]').css('background','rgba(250, 128, 114, 0.21)');
+				        tempprop =  $('input[name=id_prop]').val();
 			    	}
 	  		}
 	    });
+	})
+
+	$('input[name=codigo]').on('blur',function(){
+		if($(this).val()!=tempcod)
+			$(this).removeAttr('style');
+	})
+
+	$('input[name=id_prop]').on('blur',function(){
+		if($(this).val()!=tempprop)
+			$(this).removeAttr('style');
 	})
 
 });

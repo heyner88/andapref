@@ -98,7 +98,7 @@ nav
 {
 	background: #D71E1E;
 	float: right;
-	height: 57px;
+	height: 59px;
 	margin: 0;
 	padding: 0;
 	width: 100%;
@@ -194,7 +194,7 @@ footer
 	border: solid #c2c1c1;
 	border-width: 1px 0 0;
 }
-.descripcion-detalle 
+.descripcion-detalle
 {
 	padding-top: 1.5em;
 	padding-bottom: 1.5em;
@@ -286,7 +286,7 @@ footer
 	padding: 0.8em;
 	vertical-align: top;
 	width: 25%;
-	
+
 }
 .footersec p
 {
@@ -361,17 +361,17 @@ footer
 .foto3 img
 {
 	width: 100%;
-	
+
 }
 .foto4 img
 {
 	width: 100%;
-	
+
 }
 .foto5 img
 {
 	width: 100%;
-	
+
 }
 .foto1, .foto2
 {
@@ -408,7 +408,7 @@ footer
 }
 .subir input[type=file]
 {
-	margin-bottom:0.8em; 
+	margin-bottom:0.8em;
 }
 #busq1, #busq2
 {
@@ -682,7 +682,7 @@ footer
 	-webkit-transition:.4s;
 }
 #inm-de #cont-organizado a:hover
-{	
+{
 	background: #A11C1C;
 	color: #fff;
 
@@ -753,7 +753,7 @@ footer
 #inm-iz #busquedac input[type=submit]:hover
 {
 	background: #B02525;
-	-webkit-transition:.4s;	
+	-webkit-transition:.4s;
 }
 #inm-iz #busquedac select
 {
@@ -949,7 +949,7 @@ footer
 #deta-lado-der #busquedac input[type=submit]:hover
 {
 	background: #B02525;
-	-webkit-transition:.4s;	
+	-webkit-transition:.4s;
 }
 #deta-lado-der #busquedac select
 {
@@ -977,7 +977,7 @@ footer
 	background: #ddd;
 	border-bottom: 1px solid #B2AFAF;
 	padding: 0.8em 0.8em 0.8em 0.8em;
-	
+
 }
 #ladoiz #menu-izq ul li a
 {
@@ -1006,7 +1006,7 @@ footer
 #ladodere h2
 {
 	color: #676767;
-	font-size: 28px;	
+	font-size: 28px;
 	text-align: left;
 }
 #ladodere .contenido-dere p
@@ -1017,7 +1017,7 @@ footer
 }
 #ladodere .contenido-dere img
 {
-	border:5px solid #fff;	
+	border:5px solid #fff;
 	width: 100%;
 	-webkit-box-shadow: 1px 1px 5px 0px rgba(50, 50, 50, 0.75);
 -moz-box-shadow:    1px 1px 5px 0px rgba(50, 50, 50, 0.75);
@@ -1059,7 +1059,7 @@ box-shadow:         1px 1px 5px 0px rgba(50, 50, 50, 0.75);
 	height: 350px;
 	width: 100%;
 	margin: 0px;
-	
+
 }
 #sesionp
 {
@@ -1094,7 +1094,7 @@ box-shadow:         1px 1px 5px 0px rgba(50, 50, 50, 0.75);
 	border: none;
 	border:1px solid #ddd;
 	margin-bottom: 0.5em;
-	padding: 0.5em;	
+	padding: 0.5em;
 	width: 95%;
 
 }
@@ -1104,7 +1104,7 @@ box-shadow:         1px 1px 5px 0px rgba(50, 50, 50, 0.75);
 	border: none;
 	border:1px solid #ddd;
 	margin-bottom: 0.5em;
-	padding: 0.5em;	
+	padding: 0.5em;
 	width: 95%;
 
 }
@@ -1116,7 +1116,7 @@ box-shadow:         1px 1px 5px 0px rgba(50, 50, 50, 0.75);
 	border:1px solid #D71E1E;
 	color: #fff;
 	margin-bottom: 0.5em;
-	padding: 0.5em;	
+	padding: 0.5em;
 	-webkit-transition:.4s;
 }
 #solicitudes
@@ -1186,7 +1186,7 @@ header #top-lado1
 {
 	width: 98%;
 }
-header #top-lado1 img	
+header #top-lado1 img
 {
 	padding: 11px 5px 5px 25px;
 }
@@ -1242,7 +1242,7 @@ header #top-lado2
 }
 #ladoiz
 {
-	padding-top:1.8em; 
+	padding-top:1.8em;
 }
 #inm-iz, #inm-de
 {

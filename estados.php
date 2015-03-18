@@ -1,3 +1,12 @@
+<?php
+session_start();
+if (!isset($_SESSION['tipousu'])){
+  	header('Location: propieta');
+}
+else
+	if($_SESSION['tipousu']!='propietario')
+		header('Location: propieta');
+?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -16,33 +25,33 @@
 	<div id="top-lado2"><a href="#">correo@inmobiliariaandapref.com</a></div>
 </header>
 <nav>
-	<div class="container">	
+	<div class="container">
 <a class="toggleMenu" href="#">Menu</a>
 <ul class="nav">
 	<li  class="test">
 		<a href="estados">Estados de Cuenta</a>
 	</li>
 	<li>
-		<a href="#">PQR</a>		
+		<a href="#">PQR</a>
 	</li>
 	<li>
-		<a href="#">Cerrar Sesión</a>
+		<a href="libs/logout">Cerrar Sesión</a>
 	</li>
 
-	
+
 </ul>
 </div>
 </nav>
 <section id="listart">
-<h2>Estados de Cuenta</h2>	
-<div id="busq1"> 
+<h2>Estados de Cuenta</h2>
+<div id="busq1">
 <div id="busquedas">
-	
-	<h2>Busqueda entre fechas </h2>	
-	
+
+	<h2>Busqueda entre fechas </h2>
+
 	<br>
-	<form>		
-		<label>Busquedar por: 
+	<form>
+		<label>Busquedar por:
 		<input type="date"> <input type="date">
 		<input type="submit" value="Buscar">
 	</form>
@@ -59,7 +68,7 @@
 		<td>Periodo Final</td>
 		<td>Estado</td>
 		<td>Acción</td>
-		
+
 	</thead>
 	<tbody>
 	<tr>
@@ -69,8 +78,8 @@
 		<td>12-02-2015</td>
 		<td><a href="">Estad08104192015</a></td>
 		<td><a href="">Descargar</a></td>
-		
-		
+
+
 	</tr>
 	<tr>
 		<td>002</td>
@@ -79,8 +88,8 @@
 		<td>12-02-2015</td>
 		<td><a href="">Estad08103192015</a></td>
 		<td><a href="">Descargar</a></td>
-		
-		
+
+
 	</tr>
 	<tr>
 		<td>001</td>
@@ -89,10 +98,10 @@
 		<td>12-02-2015</td>
 		<td><a href="">Estad08102192015</a></td>
 		<td><a href="">Descargar</a></td>
-		
-		
+
+
 	</tr>
-		
+
 	</tbody>
 </table>
 

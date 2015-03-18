@@ -1,3 +1,12 @@
+<?php
+session_start();
+if (!isset($_SESSION['tipousu'])){
+  	header('Location: admin');
+}
+else
+	if($_SESSION['tipousu']!='admin')
+		header('Location: admin');
+?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -8,6 +17,7 @@
 <link rel="stylesheet" href="css/stylesheet.css" />
 <link rel="stylesheet" href="css/style1.css" />
 <link rel="stylesheet" type="text/css" href="css/style-menu.css">
+<link rel="stylesheet" type="text/css" href="css/msj.css">
 <script type="text/javascript" src="js/modernizr.custom.86080.js"></script>
 </head>
 <body>
@@ -52,87 +62,37 @@
 		<a href="facturacion">Facturación</a>
 	</li>
 	<li>
-		<a href="contacto">Cerrar Sesión</a>
+		<a href="libs/logout">Cerrar Sesión</a>
 	</li>
-
-
 </ul>
 </div>
 </nav>
-<section id="listart">
-<h2>Facturación</h2>
-<div id="busq1">
-<div id="busquedas">
-	<form>
-		<label>Busquedas por: </label><input type="number" placeholder="Codigo"> <input type="number" placeholder="Id Arrendatario">
-		<input type="submit" value="Buscar">
-	</form>
-	<br>
-	<form>
-		<label>Busquedas por:
-		<input type="date"> <input type="date">
-		<input type="submit" value="Buscar">
+<section id="crearpref">
+<div id="crear1">
+	<h2>Editar Proveedor</h2>
+	<p>Ingresa la identificación del propietario para editar.</p>
+	<form id="edit_prov">
+		<input type="number" placeholder="Id Propietario" name="id_prop" id="id_prop" required>
+		<input type="text" placeholder="Nombre" name="nombre" required>
+		<input type="text" placeholder="Apellido" name="apellido" required>
+		<input type="text" placeholder="Telefono fijo" name="telefono" required>
+		<input type="text" placeholder="Movil" name="movil" required>
+		<input type="text" placeholder="Email" name="email">
+		<input type="text" placeholder="Direccion" name="direccion" required>
+</div>
+<div id="crear2">
+	<h2>Contrato</h2>
+	<div id="existente"></div>
+	<h2>Agregar</h2>
+		<div class="subir"><input type="file" name="contrato[]"> <a href="javascript:void(0)" class="agrega">Mas</a></div>
+	<input type="submit" value="Guardar">
 	</form>
 </div>
-</div>
-<div id="busq2">
-<h2>Generar facturación</h2>
-<form>
-		<p>Seleccione carpeta</p>
-		<label>Periodo:
-		<input type="date"> <input type="date">
-		<input type="submit" value="Generar">
-	</form>
 
-</div>
-<table>
-	<thead>
-		<td>Codigo</td>
-		<td>Id Arrendatario</td>
-		<td>Periodo Inicial</td>
-		<td>Periodo Final</td>
-		<td>Factura</td>
-		<td>Editar</td>
-
-	</thead>
-	<tbody>
-	<tr>
-		<td>003</td>
-		<td>80360011</td>
-		<td>12-02-2015</td>
-		<td>12-02-2015</td>
-		<td><input type="file" disabled=""></td>
-		<td><a href="">Editar</a></td>
-
-
-	</tr>
-	<tr>
-		<td>002</td>
-		<td>80360011</td>
-		<td>12-02-2015</td>
-		<td>12-02-2015</td>
-		<td><input type="file" disabled=""></td>
-		<td><a href="">Editar</a></td>
-
-
-	</tr>
-	<tr>
-		<td>001</td>
-		<td>80360011</td>
-		<td>12-02-2015</td>
-		<td>12-02-2015</td>
-		<td><input type="file"></td>
-		<td><a href="">Guardar</a></td>
-
-
-	</tr>
-
-	</tbody>
-</table>
 
 </section>
-
 </body>
-<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
 <script type="text/javascript" src="js/script-menu.js"></script>
+<script type="text/javascript" src="js/script_editprop.js"></script>
 </html>

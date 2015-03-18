@@ -1,3 +1,9 @@
+<?php
+session_start();
+if (isset($_SESSION['tipousu']) && $_SESSION['tipousu']=='arrendatario') {
+  header('Location: arrendatario');
+}
+?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -12,8 +18,7 @@
 <link rel="stylesheet" href="css/style1.css" />
 <link rel="stylesheet" href="css/responsivemobilemenu.css" type="text/css"/>
 <link rel="stylesheet" type="text/css" href="css/style-menu.css">
-<script type="text/javascript" src="js/modernizr.custom.86080.js"></script>
-<script type="text/javascript" src="js/prefixfree.js"></script>
+<link rel="stylesheet" href="css/msj.css" />
 </head>
 <body>
 <header>
@@ -21,17 +26,17 @@
 	<div id="top-lado2"><a href="#">correo@inmobiliariaandapref.com</a></div>
 </header>
 <nav>
-	
+
 </nav>
 <section>
 <div id="sesionp">
 <div id="sesionini">
-<form>
+<form id="logueo">
 	<h2>Inicio de Sesión</h2>
-	<h3>Propietarios</h3>
+	<h3>Arrendatarios</h3>
 	<img src="images/logo.png">
-	<input type="text" placeholder="Usuario" required> 
-	<input type="password" placeholder="Contraseña" required>
+	<input type="text" placeholder="Usuario" name="usuario" required>
+	<input type="password" placeholder="Contraseña" name="password" required>
 	<input type="submit" value="Iniciar">
 </form>
 </div>
@@ -60,7 +65,7 @@
 	<h2>Con el respaldo de:</h2>
 	<img src="images/seguros_bolivar.png">
 	<img src="images/libertador.png">
-	
+
 </div>
 	<hr class="divi1">
 	<div id="copyright">
@@ -72,6 +77,8 @@
         </div>
 </footer>
 </body>
-<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+<script src ='js/jquery-1.7.2.min.js'></script>
+<script type="text/javascript" src="js/modernizr.custom.86080.js"></script>
 <script type="text/javascript" src="js/script-menu.js"></script>
+<script src="js/script_login.js"></script>
 </html>

@@ -1,3 +1,12 @@
+<?php
+session_start();
+if (!isset($_SESSION['tipousu'])){
+  	header('Location: admin');
+}
+else
+	if($_SESSION['tipousu']!='admin')
+		header('Location: admin');
+?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -9,7 +18,6 @@
 <link rel="stylesheet" href="css/style1.css" />
 <link rel="stylesheet" type="text/css" href="css/style-menu.css">
 <link rel="stylesheet" type="text/css" href="css/msj.css">
-<script type="text/javascript" src="js/modernizr.custom.86080.js"></script>
 </head>
 <body>
 <header>
@@ -27,19 +35,33 @@
 		<a href="crear-proveedor">Crear Proveedor</a>
 	</li>
 	<li>
+		<a href="#">Editar</a>
+		<ul>
+			<li>
+				<a href="editar-provee">Editar Proveedor</a>
+			</li>
+			<li>
+				<a href="editar-inmueble">Editar Inmueble</a>
+			</li>
+			<li>
+				<a href="editar-arren">Editar Arrendatario</a>
+			</li>
+		</ul>
+	</li>
+	<li>
 		<a href="ligar">Ligar</a>
 	</li>
 	<li>
 		<a href="listar">Listar</a>
 	</li>
 	<li>
-		<a href="estadosadmin">Estados de Cuenta</a>
+		<a href="estadosadmin">Est de Cuenta</a>
 	</li>
 	<li>
 		<a href="facturacion">Facturación</a>
 	</li>
 	<li>
-		<a href="contacto">Cerrar Sesión</a>
+		<a href="libs/logout">Cerrar Sesión</a>
 	</li>
 
 
@@ -54,8 +76,14 @@
 		<input type="number" placeholder="Id Propietario" name="id_prop" required>
 		<select name="tipo">
 			<option value="">Tipo de Inmubele</option>
-			<option>Tipo1</option>
-			<option>Tipo2</option>
+			<?php
+				include("libs/conexion.php");
+				$sel = mysql_query("SELECT * FROM tipo_inmueble");
+				while($resp=mysql_fetch_object($sel))
+				{
+					echo'<option>'.$resp->Tipo_inm.'</option>';
+				}
+			?>
 		</select>
 		<input type="number" placeholder="Mt2" name="mt2" required>
 		<input type="number" placeholder="Habitaciones" name="habitaciones" required>
@@ -71,7 +99,20 @@
 			<option>Venta</option>
 		</select>
 		<input type="number" placeholder="Valor" name="valor" required>
-		<input type="text" placeholder="Barrio" name="barrio" required>
+		<select name="departamento" required>
+			<option value="">Departamento</option>
+			<?php
+				$sel = mysql_query("SELECT * FROM departamentos");
+				while($resp=mysql_fetch_object($sel))
+				{
+					echo'<option value="'.$resp->id.'">'.$resp->nombre.'</option>';
+				}
+			?>
+		</select>
+		<select name="ciudad" required>
+			<option value="">Ciudad</option>
+		</select>
+		<input type="text" placeholder="Barrio" name="barrio">
 		<p>Ubicación de Google Maps</p>
 		<input type="text" placeholder="Ubicación en X" name="ux" required>
 		<input type="text" placeholder="Ubicación en Y" name="uy" required>
@@ -127,6 +168,7 @@
 </footer> -->
 </body>
 <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="js/modernizr.custom.86080.js"></script>
 <script type="text/javascript" src="js/script-menu.js"></script>
 <script type="text/javascript" src="js/script_inmueble.js"></script>
 </html>

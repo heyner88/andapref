@@ -1,4 +1,5 @@
 $(document).ready(function(){
+tempprop=0;
 
 	$('.agrega').live('click',function(){
 		$(this).parent().after('<div class="subir tmp"><input type="file" name="contrato[]"> <a href="javascript:void(0)" class="agrega">Mas</a></div>');
@@ -50,7 +51,7 @@ $(document).ready(function(){
 			        setTimeout(function() {
 			            $("#rp").fadeOut();
 			            $('#fondo').fadeOut('fast');
-			        }, 3000);
+			        }, 2500);
 			        $('input').not('input[type=submit]').val('');
 			        $('.tmp').remove();
 			    }
@@ -68,10 +69,17 @@ $(document).ready(function(){
 				        setTimeout(function() {
 				            $("#rp").fadeOut();
 				            $('#fondo').fadeOut('fast');
-				        }, 3000);
+				        }, 2500);
+				         $('input[name=id_prop]').css('background','rgba(250, 128, 114, 0.21)');
+				        tempprop =  $('input[name=id_prop]').val();
 			    	}
 	  		}
 	    });
+	})
+
+	$('input[name=id_prop]').on('blur',function(){
+		if($(this).val()!=tempprop)
+			$(this).removeAttr('style');
 	})
 
 });
